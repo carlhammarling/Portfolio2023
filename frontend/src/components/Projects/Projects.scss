@@ -1,0 +1,95 @@
+@import "../../styles/variables";
+
+.projectsWrapper {
+  background-color: $pinkBgLight;
+
+  .cus-div {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      z-index: -1;
+      bottom: 0;
+      content: "";
+    }
+
+    .content {
+      padding-inline: 40px;
+      display: flex;
+
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  #skew0 {
+    background: $pinkBgLight;
+    background: linear-gradient(
+      180deg,
+      rgba(115, 18, 70, 1) 0%,
+      rgba(163, 41, 107, 1) 26%
+    );
+    padding-block: 50px;
+
+    .fa-xs {
+      font-size: 70%;
+      vertical-align: 3px;
+    }
+    z-index: 11;
+  }
+
+  #skew1 {
+    background: $beigeBg;
+    z-index: 10;
+    padding-block: 150px;
+
+    p {
+      color: $darkFont;
+    }
+  }
+  #skew2 {
+    background: $grayBg;
+    z-index: 9;
+    padding-block: 150px;
+  }
+  #skew3 {
+    background: $darkBg;
+    z-index: 8;
+    padding-block: 150px;
+  }
+
+  #skew0::after {
+    transform-origin: right bottom;
+    transform: skewY(-15deg);
+    background: linear-gradient(
+      180deg,
+      rgba(115, 18, 70, 0) 0%,
+      rgba(163, 41, 107, 1) 72%
+    );
+  }
+
+  #skew1::after {
+    transform-origin: left bottom;
+    transform: skewY(15deg);
+    background: linear-gradient(
+      155deg,
+      rgba(238, 239, 221, 1) 30%,
+      rgba(204, 205, 192, 1) 100%
+    );
+  }
+
+  #skew2::after {
+    transform-origin: right bottom;
+    transform: skewY(-15deg);
+    background: rgb(175, 177, 153);
+    background: linear-gradient(
+      210deg,
+      rgba(175, 177, 153, 1) 40%,
+      rgba(62, 63, 55, 1) 120%
+    );
+  }
+}

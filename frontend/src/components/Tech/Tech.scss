@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.techWrapper {
+    display: flex;
+    height: 410px;
+
+    .leftTech {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        padding: 20px;        
+        background-color: $redBg;
+        height: 100%;
+        width: 50%;
+
+        h3 {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $beigeFont;
+        }
+
+        p {
+            text-indent: 0;
+            line-height: 1.2;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-family: 'Karantina';
+
+        }
+
+    }
+
+    .rightTech {
+        background: url("https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=800");
+        background-size: cover;
+        background-position: center center;
+        filter: grayscale(70%);
+        transition: .2s ease-in-out;
+        width: 50%;
+
+        &:hover {
+            filter: grayscale(30%);
+
+        }
+
+    }
+}

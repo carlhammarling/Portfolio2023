@@ -1,0 +1,8 @@
+@import './variables';
+
+@mixin btn {
+    padding: .7rem 1.6rem ;
+    border-radius: 2px;
+    border: 1px solid $beigeFont;
+    text-decoration: none;
+}

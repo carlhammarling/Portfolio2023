@@ -1,0 +1,54 @@
+@use './styles/mixins';
+@import './styles/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $beigeFont;
+    font-family: 'Saira Condensed', sans-serif;
+}
+body {
+    background-color: $darkBg;
+
+}
+
+
+h1, h2, h3 {
+    font-family: 'Karantina';
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+h2 {
+    font-size: 120px;
+    line-height: 77.7%;
+}
+
+h3 {
+    font-size: 90px;
+    line-height: 77.7%;
+}
+
+h4 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.8;
+    font-weight: 200;
+    text-indent: 30px;
+}
+
+a {
+    @include mixins.btn;
+}
