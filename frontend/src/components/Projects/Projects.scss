@@ -19,10 +19,61 @@
 
     .content {
       padding-inline: 40px;
+      padding-bottom: 80px;
       display: flex;
-
       flex-direction: column;
       gap: 50px;
+    }
+
+    .projectContent {
+      display: flex;
+      flex-direction: row;
+
+      .projectText {
+        font-size: 16px;
+        padding: 16px;
+        font-weight: 400;
+      }
+
+      .left {
+        width: 50%;
+        position: relative;
+
+        img {
+          position: relative;
+          margin: 10px;
+          border: 10px solid $beigeBg;
+          top: -50px;
+          width: 100%;
+          transform-origin: center center;
+          transform: rotate(15deg);
+          left: -20px;
+          transition: 0.5s ease-in-out;
+
+          &:hover {
+            // scale: 1.1;
+            top: -70px;
+            transform: rotate(360deg);
+            left: 0px;
+
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: -50px;
+      z-index: 1;
+      width: 50%;
+      position: relative;
+
+      a {
+        color: $darkFont;
+        border-color: $darkFont;
+      }
     }
   }
 
@@ -39,57 +90,39 @@
       font-size: 70%;
       vertical-align: 3px;
     }
-    z-index: 11;
+    z-index: 6;
   }
 
   #skew1 {
     background: $beigeBg;
-    z-index: 10;
-    padding-block: 150px;
-
+    z-index: 8;
     p {
       color: $darkFont;
     }
   }
   #skew2 {
     background: $grayBg;
-    z-index: 9;
+    z-index: 10;
     padding-block: 150px;
   }
   #skew3 {
     background: $darkBg;
-    z-index: 8;
+    z-index: 12;
     padding-block: 150px;
-  }
-
-  #skew0::after {
-    transform-origin: right bottom;
-    transform: skewY(-15deg);
-    background: linear-gradient(
-      180deg,
-      rgba(115, 18, 70, 0) 0%,
-      rgba(163, 41, 107, 1) 72%
-    );
   }
 
   #skew1::after {
     transform-origin: left bottom;
-    transform: skewY(15deg);
-    background: linear-gradient(
-      155deg,
-      rgba(238, 239, 221, 1) 30%,
-      rgba(204, 205, 192, 1) 100%
-    );
+    z-index: -1;
+    transform: skewY(-15deg);
   }
-
   #skew2::after {
     transform-origin: right bottom;
-    transform: skewY(-15deg);
-    background: rgb(175, 177, 153);
-    background: linear-gradient(
-      210deg,
-      rgba(175, 177, 153, 1) 40%,
-      rgba(62, 63, 55, 1) 120%
-    );
+    transform: skewY(15deg);
   }
+  #skew3::after {
+    transform-origin: left bottom;
+    transform: skewY(-15deg);
+  }
+  
 }
