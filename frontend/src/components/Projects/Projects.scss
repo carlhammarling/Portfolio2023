@@ -39,7 +39,7 @@
         width: 50%;
         position: relative;
 
-        img {
+        img.cleanshirt {
           position: relative;
           margin: 10px;
           border: 10px solid $beigeBg;
@@ -57,6 +57,16 @@
             left: 0px;
 
           }
+        }
+        img.healthWeekly {
+          position: relative;
+          margin: 10px;
+          border: 10px solid $grayBg;
+          top: -120px;
+          width: 100%;
+          transform-origin: center center;
+          transition: 0.5s ease-in-out;
+
         }
       }
     }
@@ -103,7 +113,7 @@
   #skew2 {
     background: $grayBg;
     z-index: 10;
-    padding-block: 150px;
+    
   }
   #skew3 {
     background: $darkBg;

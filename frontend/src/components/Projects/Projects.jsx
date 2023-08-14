@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Projects.scss";
 import cleanshirt from "../../assets/cleanshirt.png";
+import healthWeekly from '../../assets/healthWeekly.png'
 
 const Projects = () => {
   return (
@@ -23,11 +24,10 @@ const Projects = () => {
       <div id="skew1" className="cus-div">
         <div className="projectContent">
           <div className="left">
-            <img src={cleanshirt} alt="Clean Shirt" />
+            <img className="cleanshirt" src={cleanshirt} alt="Clean Shirt" />
           </div>
           <div className="right">
             <p className="projectText">
-              {" "}
               <strong className="darkFont">CLEANSHiRT</strong> - Fullstack MERN
               application. Fully functional E-Commerce site with possibility to
               place orders, see historical orders and place reviews. Here I have
@@ -39,8 +39,17 @@ const Projects = () => {
         </div>
       </div>
       <div id="skew2" className="cus-div">
-        <div className="content">
-          <p>PROJECT 2</p>
+        <div className="projectContent">
+        <div className="left">
+            <img className="healthWeekly" src={healthWeekly} alt="HealthWeekly" />
+          </div>
+          <div className="right">
+            <p className="projectText">
+              <strong>Health Weekly</strong> - UX/UI Research project.
+Thrue interviews, and by researching other food delivery apps I  created this app.
+            </p>
+            {/* <Link>VISIT SITE</Link> */}
+          </div>
         </div>
       </div>
       <div id="skew3" className="cus-div">
